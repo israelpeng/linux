@@ -2,9 +2,13 @@ sudo dnf install epel-release
 sudo dnf groupinstall "Xfce" -y 
 sudo systemctl set-default graphical
 
-systemctl disable gdm
-dnf install sddm
-systemctl enable sddm
+sudo systemctl disable gdm
+sudo dnf install sddm
+sudo systemctl enable sddm
 
 wget https://bit.ly/3mc48yr -O /tmp/teamviewer.rpm  ## https://download.teamviewer.com/download/linux/teamviewer.x86_64.rpm
 sudo dnf install /tmp/teamviewer.rpm -y
+
+sudo teamviewer deamon start
+sudo teamviewer deamon enable
+
